@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KOISEG | Asesorías en Prevención de Riesgos</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4fbfd;
+      color:#3f3f46;
+      line-height:1.6;
+    }
+
+    /* =========================
+       MENU
+    ========================== */
+
+    nav{
+      background:#4b4b50;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:30px;
+      flex-wrap:wrap;
+      list-style:none;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#22d3ee;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header{
+      background:linear-gradient(135deg,#00b8d9,#008ec2,#5f6065);
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .logo{
+      width:280px;
+      background:white;
+      padding:15px;
+      border-radius:18px;
+      margin-bottom:25px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    header h1{
+      font-size:3rem;
+      margin-bottom:15px;
+      letter-spacing:1px;
+    }
+
+    header p{
+      max-width:900px;
+      margin:auto;
+      font-size:1.2rem;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      background:#22d3ee;
+      color:#1f2937;
+      padding:15px 30px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+      box-shadow:0 5px 12px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover{
+      background:#06b6d4;
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       SECCIONES
+    ========================== */
+
+    section{
+      max-width:1200px;
+      margin:auto;
+      padding:70px 20px;
+    }
+
+    h2{
+      text-align:center;
+      color:#008ec2;
+      margin-bottom:40px;
+      font-size:2.2rem;
+    }
+
+    /* =========================
+       TARJETAS
+    ========================== */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      border-top:5px solid #22d3ee;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#4b4b50;
+    }
+
+    /* =========================
+       SOBRE NOSOTROS
+    ========================== */
+
+    .about{
+      background:white;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      border-left:6px solid #00b8d9;
+    }
+
+    .highlight{
+      background:#dff8fc;
+      padding:25px;
+      border-radius:15px;
+      margin-top:25px;
+      border-left:6px solid #22d3ee;
+    }
+
+    /* =========================
+       CONTACTO
+    ========================== */
+
+    .contact{
+      background:linear-gradient(135deg,#00b8d9,#4b4b50);
+      color:white;
+      text-align:center;
+      padding:60px 20px;
+      border-radius:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .contact h2{
+      color:white;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:#4b4b50;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:768px){
+
+      .logo{
+        width:220px;
+      }
+
+      header h1{
+        font-size:2.2rem;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       MENU
+  ========================== -->
+
+  <nav>
+
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#sobre">Sobre Nosotros</a></li>
+      <li><a href="#empresas">Empresas Asesoradas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- =========================
+       INICIO
+  ========================== -->
+
+  <header id="inicio">
+
+    <!-- LOGO PNG -->
+    <img src="LOGO KOISEG.png" alt="Logo KOISEG" class="logo">
+
+    <h1>KOISEG</h1>
+
+    <p>
+      Asesorías y Servicios en Prevención de Riesgos para PYMES,
+      empresas contratistas y subcontratistas.
+    </p>
+
+    <p>
+      Especialistas en carpetas de arranque, documentación preventiva,
+      acreditaciones, cumplimiento legal y apoyo operacional.
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/56997755900"
+       target="_blank">
+
+      ESCRÍBENOS POR WHATSAPP
+
+    </a>
+
+  </header>
+
+  <!-- =========================
+       SERVICIOS
+  ========================== -->
+
+  <section id="servicios">
+
+    <h2>Nuestros Servicios</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Carpetas de Arranque</h3>
+        <p>
+          Elaboración y revisión de carpetas de arranque para empresas
+          contratistas y subcontratistas.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Documentación Preventiva</h3>
+        <p>
+          Procedimientos de trabajo seguro, matrices de riesgos,
+          programas de prevención y documentación legal.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Asesorías a PYMES</h3>
+        <p>
+          Apoyo preventivo y documental para pequeñas y medianas
+          empresas de distintos rubros.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cumplimiento Legal</h3>
+        <p>
+          Apoyo en normativa vigente, DS44, protocolos MINSAL
+          y obligaciones legales.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Capacitaciones</h3>
+        <p>
+          Charlas de seguridad, inducciones, campañas preventivas
+          y capacitaciones.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Apoyo a Contratistas</h3>
+        <p>
+          Gestión documental y preparación para acreditaciones
+          y auditorías.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       SOBRE NOSOTROS
+  ========================== -->
+
+  <section id="sobre">
+
+    <h2>Sobre KOISEG</h2>
+
+    <div class="about">
+
+      <p>
+        KOISEG entrega asesorías y servicios en prevención de riesgos,
+        apoyando a empresas en gestión documental, cumplimiento legal,
+        control operacional y acreditaciones.
+      </p>
+
+      <div class="highlight">
+
+        <strong>
+          Nuestro objetivo es ayudar a las empresas a fortalecer
+          su sistema preventivo y facilitar el cumplimiento de
+          requisitos exigidos por mandantes y organismos fiscalizadores.
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       EMPRESAS
+  ========================== -->
+
+  <section id="empresas">
+
+    <h2>Empresas Asesoradas</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>D&D Aseo Industrial</h3>
+      </div>
+
+      <div class="card">
+        <h3>DIELCO Spa.</h3>
+      </div>
+
+      <div class="card">
+        <h3>Estación de Servicios Santa Rosa Ltda.</h3>
+      </div>
+
+      <div class="card">
+        <h3>REYCO Spa.</h3>
+      </div>
+
+      <div class="card">
+        <h3>Transportes Pampa y Mar Spa.</h3>
+      </div>
+
+      <div class="card">
+        <h3>Ziur Ingeniería y Montaje Spa.</h3>
+      </div>
+
+      <div class="card">
+        <h3>AYG Spa.</h3>
+      </div>
+
+      <div class="card">
+        <h3>Bruening Industrial S.A.</h3>
+      </div>
+
+      <div class="card">
+        <h3>Arriendos y Transportes YACID</h3>
+      </div>
+
+      <div class="card">
+        <h3>PV Spa.</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CONTACTO
+  ========================== -->
+
+  <section id="contacto">
+
+    <div class="contact">
+
+      <h2>Solicita tu Asesoría</h2>
+
+      <p>
+        ¿Necesitas apoyo con carpetas de arranque,
+        documentación preventiva o acreditaciones?
+      </p>
+
+      <p>
+        Contáctanos directamente por WhatsApp.
+      </p>
+
+      <a class="btn"
+         href="https://wa.me/56997755900"
+         target="_blank">
+
+        +56 9 9775 5900
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    © 2026 KOISEG | Asesorías y Servicios en Prevención de Riesgos
+
+  </footer>
+
+</body>
+</html>
