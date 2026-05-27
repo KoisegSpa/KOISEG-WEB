@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KOISEG: asesorías profesionales en prevención de riesgos, seguridad y salud ocupacional, gestión documental, cumplimiento legal y medio ambiente para empresas contratistas, subcontratistas y PYMES." />
+  <title>KOISEG | Prevención de Riesgos, Seguridad y Gestión</title>
+  <style>
+    :root{
+      --turquesa:#009ca6;
+      --turquesa-2:#00b6c7;
+      --grafito:#343434;
+      --gris:#6f7277;
+      --fondo:#f5fbfc;
+      --blanco:#ffffff;
+      --borde:#e3eef0;
+      --sombra:0 18px 45px rgba(12,42,48,.12);
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:Arial, Helvetica, sans-serif;background:var(--fondo);color:var(--grafito);line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .topbar{background:#262626;color:#fff;font-size:.92rem;padding:9px 20px;}
+    .topbar .wrap{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;}
+    .topbar a{color:#fff;font-weight:700;}
+    nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--borde);}
+    .navwrap{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:18px;}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--grafito);letter-spacing:.5px;}
+    .brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid var(--turquesa);background:#fff;}
+    nav ul{list-style:none;display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:center;font-weight:700;color:#3f3f46;font-size:.95rem;}
+    nav a:hover{color:var(--turquesa);}
+    .whatsapp-mini{display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:#fff!important;padding:10px 16px;border-radius:999px;font-weight:900;box-shadow:0 8px 20px rgba(22,163,74,.22);}
+    .wa-icon{width:20px;height:20px;display:inline-block;vertical-align:middle;}
+    header{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(0,156,166,.94),rgba(0,92,105,.92)),url('LOGO 7.png');background-size:cover;background-position:center;color:#fff;}
+    header:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.22),transparent 28%),linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.02));}
+    .hero{position:relative;max-width:1180px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:44px;padding:92px 20px 88px;}
+    .hero-logo{background:#fff;border-radius:32px;padding:24px;box-shadow:var(--sombra);max-width:430px;justify-self:center;}
+    .hero-logo img{width:100%;display:block;border-radius:22px;}
+    .eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:999px;font-weight:900;margin-bottom:20px;}
+    h1{font-size:clamp(2.35rem,5vw,4.5rem);line-height:1.02;margin-bottom:20px;letter-spacing:-1px;}
+    .hero p{font-size:1.15rem;max-width:690px;margin-bottom:18px;}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:14px 22px;font-weight:900;transition:.25s;border:2px solid transparent;}
+    .btn-primary{background:#fff;color:var(--turquesa);box-shadow:0 12px 28px rgba(0,0,0,.20);}
+    .btn-primary:hover{transform:translateY(-3px);}
+    .btn-outline{border-color:rgba(255,255,255,.72);color:#fff;}
+    .btn-outline:hover{background:#fff;color:var(--turquesa);}
+    section{max-width:1180px;margin:auto;padding:78px 20px;}
+    .section-title{text-align:center;max-width:850px;margin:0 auto 42px;}
+    .section-title span{color:var(--turquesa);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:.88rem;}
+    h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:10px 0 14px;color:var(--grafito);}
+    .section-title p{color:var(--gris);font-size:1.06rem;}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .card{background:#fff;border:1px solid var(--borde);border-radius:24px;padding:30px;box-shadow:0 10px 25px rgba(20,60,68,.06);transition:.25s;position:relative;overflow:hidden;}
+    .card:before{content:"";position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--turquesa),var(--turquesa-2));}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--sombra);}
+    .card .icon{width:54px;height:54px;border-radius:18px;background:#e8fbfd;color:var(--turquesa);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:1.55rem;font-weight:900;}
+    .card h3{font-size:1.2rem;margin-bottom:10px;color:#2d2d31;}
+    .card p{color:#62666b;font-size:.98rem;}
+    .about-block{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center;}
+    .about-panel{background:#fff;border-radius:28px;box-shadow:var(--sombra);padding:36px;border-left:7px solid var(--turquesa);}
+    .about-panel p{margin-bottom:16px;color:#55595f;}
+    .values{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+    .value{background:#fff;border:1px solid var(--borde);border-radius:20px;padding:22px;box-shadow:0 8px 22px rgba(20,60,68,.06);}
+    .value strong{color:var(--turquesa);display:block;margin-bottom:6px;}
+    .band{max-width:none;background:#262626;color:#fff;margin:0;padding:72px 20px;}
+    .band .inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;}
+    .metric{border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:24px;background:rgba(255,255,255,.05);}
+    .metric strong{display:block;font-size:2rem;color:#20d2df;margin-bottom:6px;}
+    .companies{grid-template-columns:repeat(5,1fr);}
+    .company{padding:22px;text-align:center;min-height:92px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#4b4b50;}
+    .contact-wrap{background:linear-gradient(135deg,var(--turquesa),#2f3336);border-radius:32px;padding:46px;color:#fff;box-shadow:var(--sombra);display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;}
+    .contact-wrap h2{color:#fff;text-align:left;margin-bottom:16px;}
+    .contact-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:16px 18px;margin-bottom:12px;}
+    .contact-item strong{display:block;font-size:.86rem;opacity:.82;text-transform:uppercase;letter-spacing:1px;}
+    .contact-item a,.contact-item span{font-weight:900;}
+    footer{background:#202020;color:#fff;text-align:center;padding:28px 20px;}
+    .float-wa{position:fixed;right:20px;bottom:20px;width:62px;height:62px;background:#16a34a;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 28px rgba(0,0,0,.26);z-index:80;}
+    .float-wa svg{width:34px;height:34px;}
+    @media(max-width:900px){.hero,.about-block,.contact-wrap{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.companies{grid-template-columns:repeat(2,1fr)}.band .inner{grid-template-columns:repeat(2,1fr)}.hero-logo{justify-self:start}.navwrap{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){nav ul{justify-content:flex-start;gap:12px}.hero{padding:64px 18px}.grid,.values,.band .inner,.companies{grid-template-columns:1fr}.contact-wrap{padding:30px 20px}.topbar .wrap{display:block}.topbar span{display:block;margin-bottom:4px}.brand img{width:50px;height:50px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Asesoría profesional en Seguridad, Salud Ocupacional, Gestión Preventiva y Medio Ambiente</span>
+      <span><a href="mailto:contacto@koiseg.cl">contacto@koiseg.cl</a> · <a href="https://wa.me/56997755900" target="_blank" rel="noopener">+56 9 9775 5900</a></span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="navwrap">
+      <a class="brand" href="#inicio"><img src="logo-koiseg-redondo.png" alt="Logo KOISEG redondo"><span>KOISEG</span></a>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre">Nosotros</a></li>
+        <li><a href="#empresas">Clientes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a class="whatsapp-mini" href="https://wa.me/56997755900" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.01 3.2A12.7 12.7 0 0 0 5.2 22.6L3.5 28.8l6.36-1.67A12.67 12.67 0 1 0 16.01 3.2Zm0 22.96c-2.05 0-3.96-.6-5.58-1.64l-.4-.25-3.77.99 1-3.67-.26-.42a10.2 10.2 0 1 1 9.01 4.99Zm5.9-7.66c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.27-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.6-1.9-1.8-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.74-1.78-1.02-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.1 1.31 3.31c.16.22 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"/></svg>WhatsApp</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="inicio">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Prevención que protege · Gestión que transforma</span>
+        <h1>Consultoría técnica en prevención de riesgos y cumplimiento operacional</h1>
+        <p>En KOISEG apoyamos a empresas, contratistas y PYMES en la implementación, ordenamiento y control de sus sistemas de Seguridad y Salud en el Trabajo, gestión documental, acreditaciones, cumplimiento legal y estándares exigidos por mandantes.</p>
+        <p>Entregamos soluciones prácticas, trazables y profesionales para fortalecer la continuidad operacional, reducir brechas preventivas y responder adecuadamente ante auditorías, fiscalizaciones y procesos de acreditación.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/56997755900" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.01 3.2A12.7 12.7 0 0 0 5.2 22.6L3.5 28.8l6.36-1.67A12.67 12.67 0 1 0 16.01 3.2Zm0 22.96c-2.05 0-3.96-.6-5.58-1.64l-.4-.25-3.77.99 1-3.67-.26-.42a10.2 10.2 0 1 1 9.01 4.99Zm5.9-7.66c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.27-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.6-1.9-1.8-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.74-1.78-1.02-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.1 1.31 3.31c.16.22 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"/></svg>Solicitar asesoría</a>
+          <a class="btn btn-outline" href="mailto:contacto@koiseg.cl">Enviar correo</a>
+        </div>
+      </div>
+      <div class="hero-logo"><img src="logo-koiseg-redondo.png" alt="Logo redondo KOISEG"></div>
+    </div>
+  </header>
+
+  <section id="servicios">
+    <div class="section-title">
+      <span>Servicios profesionales</span>
+      <h2>Soluciones integrales para la gestión preventiva</h2>
+      <p>Desarrollamos documentación, control de cumplimiento y soporte técnico para empresas que requieren operar bajo estándares legales, contractuales y corporativos.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">01</div><h3>Carpetas de arranque y acreditación</h3><p>Elaboración, revisión y actualización de antecedentes preventivos para procesos de ingreso, acreditación documental y control de requisitos de empresas contratistas y subcontratistas.</p></article>
+      <article class="card"><div class="icon">02</div><h3>Procedimientos y matrices de riesgo</h3><p>Desarrollo de procedimientos de trabajo seguro, instructivos operacionales, IPER, matrices de peligros, evaluación de riesgos y definición de controles críticos por actividad.</p></article>
+      <article class="card"><div class="icon">03</div><h3>Cumplimiento legal y normativo</h3><p>Asesoría en obligaciones de Seguridad y Salud en el Trabajo, DS 44, protocolos MINSAL, estándares internos, reportabilidad preventiva y preparación ante auditorías o fiscalizaciones.</p></article>
+      <article class="card"><div class="icon">04</div><h3>Sistemas de gestión preventivos</h3><p>Diseño, implementación y fortalecimiento de programas preventivos, planes de acción, indicadores de desempeño, control documental y seguimiento de compromisos operacionales.</p></article>
+      <article class="card"><div class="icon">05</div><h3>Capacitaciones y campañas</h3><p>Charlas técnicas, inducciones, campañas preventivas, difusión de aprendizajes, reforzamiento conductual y sensibilización en seguridad, salud ocupacional y medio ambiente.</p></article>
+      <article class="card"><div class="icon">06</div><h3>Medio ambiente y gestión de residuos</h3><p>Apoyo en controles ambientales, segregación de residuos, aspectos e impactos ambientales, sustancias peligrosas y buenas prácticas para el cumplimiento de exigencias del mandante.</p></article>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="section-title">
+      <span>Quiénes somos</span>
+      <h2>KOISEG: asesoría técnica con enfoque operacional</h2>
+      <p>Trabajamos con una mirada preventiva, ordenada y práctica, orientada a proteger a las personas, asegurar cumplimiento y aportar valor a la gestión de cada organización.</p>
+    </div>
+    <div class="about-block">
+      <div class="about-panel">
+        <p><strong>KOISEG</strong> entrega asesoría especializada en prevención de riesgos, seguridad y salud ocupacional, gestión documental, cumplimiento legal, acreditaciones y soporte operacional para empresas de distintos rubros.</p>
+        <p>Nuestro propósito es acompañar a las organizaciones en la identificación de brechas, implementación de controles, trazabilidad documental y mejora continua de sus procesos preventivos.</p>
+        <p>La gestión se desarrolla con criterios técnicos, lenguaje claro, enfoque en resultados y alineamiento con las exigencias legales, contractuales y de mandantes.</p>
+      </div>
+      <div class="values">
+        <div class="value"><strong>Seguridad y Salud</strong>Protección efectiva de las personas mediante controles preventivos, documentación técnica y seguimiento permanente.</div>
+        <div class="value"><strong>Personas</strong>Fortalecimiento de competencias, cultura preventiva y comunicación clara para equipos de trabajo.</div>
+        <div class="value"><strong>Gestión</strong>Ordenamiento documental, indicadores, reportabilidad y cumplimiento verificable.</div>
+        <div class="value"><strong>Medio Ambiente</strong>Apoyo en prácticas responsables, control de residuos y prevención de impactos ambientales.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Enfoque de trabajo">
+    <div class="inner">
+      <div class="metric"><strong>01</strong>Diagnóstico de brechas</div>
+      <div class="metric"><strong>02</strong>Plan de acción técnico</div>
+      <div class="metric"><strong>03</strong>Implementación documental</div>
+      <div class="metric"><strong>04</strong>Seguimiento y mejora continua</div>
+    </div>
+  </section>
+
+  <section id="empresas">
+    <div class="section-title">
+      <span>Experiencia</span>
+      <h2>Empresas asesoradas</h2>
+      <p>Apoyo preventivo y documental a organizaciones con necesidades de cumplimiento, operación segura y control de estándares.</p>
+    </div>
+    <div class="grid companies">
+      <div class="card company">D&amp;D Aseo Industrial</div>
+      <div class="card company">DIELCO Spa.</div>
+      <div class="card company">Estación de Servicios Santa Rosa Ltda.</div>
+      <div class="card company">REYCO Spa.</div>
+      <div class="card company">Transportes Pampa y Mar Spa.</div>
+      <div class="card company">Ziur Ingeniería y Montaje Spa.</div>
+      <div class="card company">AYG Spa.</div>
+      <div class="card company">Arriendos y Transportes YACID</div>
+      <div class="card company">PV Spa.</div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="contact-wrap">
+      <div>
+        <h2>Solicita una asesoría técnica</h2>
+        <p>Conversemos sobre las necesidades preventivas, documentales o de acreditación de tu empresa. Te apoyamos con una respuesta profesional, ordenada y orientada al cumplimiento.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/56997755900" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.01 3.2A12.7 12.7 0 0 0 5.2 22.6L3.5 28.8l6.36-1.67A12.67 12.67 0 1 0 16.01 3.2Zm0 22.96c-2.05 0-3.96-.6-5.58-1.64l-.4-.25-3.77.99 1-3.67-.26-.42a10.2 10.2 0 1 1 9.01 4.99Zm5.9-7.66c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.27-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.6-1.9-1.8-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.74-1.78-1.02-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.1 1.31 3.31c.16.22 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"/></svg>WhatsApp</a>
+          <a class="btn btn-outline" href="mailto:contacto@koiseg.cl">contacto@koiseg.cl</a>
+        </div>
+      </div>
+      <div>
+        <div class="contact-item"><strong>Correo</strong><a href="mailto:contacto@koiseg.cl">contacto@koiseg.cl</a></div>
+        <div class="contact-item"><strong>WhatsApp</strong><a href="https://wa.me/56997755900" target="_blank" rel="noopener">+56 9 9775 5900</a></div>
+        <div class="contact-item"><strong>Dirección</strong><span>Avenida La Tirana #5445 OF. 1401 Torres de Huayquique, Iquique - Chile</span></div>
+      </div>
+    </div>
+  </section>
+
+  <a class="float-wa" href="https://wa.me/56997755900" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.01 3.2A12.7 12.7 0 0 0 5.2 22.6L3.5 28.8l6.36-1.67A12.67 12.67 0 1 0 16.01 3.2Zm0 22.96c-2.05 0-3.96-.6-5.58-1.64l-.4-.25-3.77.99 1-3.67-.26-.42a10.2 10.2 0 1 1 9.01 4.99Zm5.9-7.66c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.27-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.6-1.9-1.8-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.74-1.78-1.02-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.1 1.31 3.31c.16.22 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"/></svg></a>
+
+  <footer>
+    <p>© 2026 KOISEG | Prevención de Riesgos · Seguridad y Salud · Gestión · Medio Ambiente</p>
+  </footer>
+</body>
+</html>
